@@ -1,0 +1,35 @@
+header{
+	background-color: #0B873D;
+	color: #fff;
+	font-size: 150%;
+	text-align: center;
+	
+}
+main{
+	display: flex;
+}
+.block_left{
+	background-color: #8CE1AE;
+	width: 40%;
+	height: 600px;
+}
+.block_mid{
+	background-color: #5CCB89;
+	width: 40%;
+	height: 600px;
+}
+.block_right{
+	background-color: #1DA956;
+	width: 20%;
+	height: 600px;
+}
+.block_right li{
+	margin: 20px;
+	list-style-image: url(./auto1.png);
+}
+.block_right a{
+	color: brown;
+}
+.block_right a:visited{
+	color: red;
+}

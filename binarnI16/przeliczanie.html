@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>przeliczanie systemów liczbowych</title>
+		<link rel="stylesheet" href=styl2.css>
+	</head>
+	<body>
+		<div id="banner">
+			<h1>Konwersja systemu dziesiętnego na binarny</h1>
+		</div>
+		<div id="lewy">
+			<h2>Menu:</h2>
+			<ul>
+				<li><a href="przeliczanie.html">na dwójkowy</a></li>
+				<li><a href="przeliczaniep.html">na dowolnu o podstawie p &lt 10</a></li>
+				<li><a href="przeliczanie16.html">na szesnastkowy</a></li>
+			</ul>
+		</div>
+		<div id="prawy">
+			<h2>przeliczanie</h2>
+			<label>podaj liczbę dziesiętną całkowitą:</label>
+			<input type="number" id="liczba"><br>
+			<input type="button" value="przelicz" onclick="dwojkowe()">
+			<p id="wynik"></p>
+		</div>
+		<div id="stopka">
+			Jarosław Kempa
+		</div>
+		<script>
+			function odwroc(ciag)
+			{
+				dl=ciag.length;
+				var odwr = "";
+				for (var i=0; i<dl;i++)
+				{
+					odwr+=ciag[dl-1-i];
+				}
+				return odwr;
+			}
+			function dwojkowe()
+			{
+				var liczba = document.getElementById("liczba").value;
+				//var wynik = document.querySelector("p");
+				var wynik = document.getElementById("wynik");
+				var binarna = "";
+				var cyfra;
+				do{
+					cyfra = parseInt(liczba)%2;
+					binarna += cyfra;
+					liczba =parseInt(liczba/2);
+				}while(liczba>0);
+				wynik.innerHTML = "liczba binarna: " + odwroc(binarna);
+			}
+		</script>
+	</body>
+</html>

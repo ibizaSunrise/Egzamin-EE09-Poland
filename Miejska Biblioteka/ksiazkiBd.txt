@@ -1,0 +1,21 @@
+
+
+- Zapytanie 1: wstawiające do tabeli czytelnicy nowy rekord z danymi: Anna, Michalak, an05mi
+
+INSERT INTRO czytelnicy VALUES (NULL, "Anna", "Michalak", "an05mi");
+
+- Zapytanie 2: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli czytelnicy
+
+SELECT imie, nazwisko FROM czytelnicy;
+
+- Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów, których autorem jest Fredro
+
+SELECT tytul FROM ksiazki WHERE id_autor = x;
+
+- Zapytanie 4: wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz obliczające
+ ilość tytułów danego autora znajdujących się w bazie biblioteka. Pole obliczające ilość tytułów należy nazwać ilosc.
+
+SELECT a.nazwisko, COUNT(tytul) AS ilosc
+FROM autorzy a, ksiazki k
+WHERE a.id=k.id_autor
+GROUP BY nazwisko

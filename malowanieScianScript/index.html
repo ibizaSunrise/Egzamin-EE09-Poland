@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Malowanie</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="czcionka.css" />
+ </head>
+ <body>
+  <header>
+<h1>Oblicz malowanie scian</h1>
+  </header>
+  
+  <main>
+  Wysokosc: 4m<br>
+  Cena za m<sup>2</sup>: 10zl<br>
+  Poday dlugosc:
+   <input id="in1" type="text"><br>
+   Poday czerokosc:
+        <input id="in2" type="text">
+        <button onclick="up()">OK</button>
+        <p id="p"></p>
+		<p id="p1"></p>
+</main>
+<script>
+        function up() {
+            let in1 = document.getElementById("in1").value;
+            let in2 = document.getElementById("in2").value;
+            in1 = +in1;
+            in2 = +in2;
+			
+			  let result = in1 * 4 * 2 + in2 *4 *2;
+			
+
+            document.getElementById("p").innerHTML = "Powierzchnia: " + result ;
+			document.getElementById("p1").innerHTML = "Cena: " + result*10 + " zl";
+        }
+    </script>
+ </body>
+</html>

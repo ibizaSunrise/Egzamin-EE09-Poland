@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iloczyn</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="czcionka.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="baner.png" alt="baner" /></a>
+    </header>
+    <nav>
+        <a href="index.html">Opis</a>
+        <a href="jaka_to_liczba.html">Jaka to liczba?</a>
+        <a href="liczby_calkowite_z_zakresu.html">Liczby całkowite z zakresu</a>
+        <a href="suma.html">Oblicz sumę</a>
+		 <a href="roznica.html">Oblicz roznicę</a>
+		  <a href="iloczyn.html">Oblicz iloczyn</a>
+		   <a href="iloraz.html">Oblicz iloraz</a>
+    </nav>
+    <main>
+        <input id="in1" type="text">
+        <input id="in2" type="text">
+        <button onclick="up()">OK</button>
+        <p id="p"></p>
+
+    </main>
+
+    <script>
+        function up() {
+            let in1 = document.getElementById("in1").value;
+            let in2 = document.getElementById("in2").value;
+            in1 = +in1;
+            in2 = +in2;
+			if(in2!=0){
+			  document.getElementById("p").innerHTML = in1 / in2;
+			}else{
+			 document.getElementById("p").innerHTML = "Błond, działanie niewykonalne";
+			}
+        
+         
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liczby całkowite z zakresu</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="czcionka.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="baner.png" alt="baner" /></a>
+    </header>
+    <nav>
+        <a href="index.html">Opis</a>
+        <a href="jaka_to_liczba.html">Jaka to liczba?</a>
+        <a href="liczby_calkowite_z_zakresu.html">Liczby całkowite z zakresu</a>
+        <a href="suma.html">Oblicz sumę</a>
+		 <a href="roznica.html">Oblicz roznicę</a>
+		  <a href="iloczyn.html">Oblicz iloczyn</a>
+		   <a href="iloraz.html">Oblicz iloraz</a>
+    </nav>
+    <main>
+        <input id="int1" type="text">
+        <input id="int2" type="text">
+        <button onclick="up()">OK</button>
+        <p id = "p"></p>
+
+    </main>
+
+    <script>
+       let result = "";
+        function up() {
+            let int1 = document.getElementById("int1").value;
+        let int2 = document.getElementById("int2").value;
+        // in1 = +in1;
+        // in2 = +in2;
+     
+        if(int1<int2){
+            for (i = int1; i <= int2; i++) {
+                result += i + ", ";
+            }
+        }else{
+            for (i = int1; i >= int2; i--) {
+                result += i + ", ";
+            }
+        }
+            
+            
+document.getElementById("p").innerHTML = result;
+        }
+      
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+ zapytanie 1: wybierające jedynie pola id, nazwa, opis, cena z tabeli podzespoly dla tych
+podzespołów, których cena jest niższa niż 1000 zł
+
+SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena<1000;
+
+ zapytanie 2: wybierające jedynie pola nazwa i opis z tabeli podzespoly dla tych podzespołów,
+które są dostępne w sklepie oraz ich producentem jest firma Intel 
+
+SELECT nazwa, opis FROM podzespoly WHERE dostepnosc=1 AND producenci_id=1;
+
+ zapytanie 3: wybierające jedynie pole nazwa z tabeli podzespoly oraz odpowiadające mu pole
+nazwa z tabeli producenci
+
+SELECT pod.nazwa, pr.nazwa FROM podzespoly pod, producenci pr WHERE pod.id=pr.id;
+
+ zapytanie 4: modyfikujące dane w tabeli producenci. Nazwa „Patriot” powinna być zapisana
+wielkimi literami: „PATRIOT”. 
+
+UPDATE producenci SET nazwa = UPPER(nazwa) WHERE id=8;

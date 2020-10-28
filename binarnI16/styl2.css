@@ -1,0 +1,35 @@
+a{
+	text-decoration: none;
+}
+html{
+	font-family: Arial;
+	font-size: 16px;
+}
+h1,h2{
+	margin: 0;
+}
+input{
+	margin: 5px 0;
+}
+#banner{
+	background-color: brown;
+	height: 50px;
+	text-align: center;
+}
+#lewy{
+	background-color: beige;
+	width: 30%;
+	height: 400px;
+	float: left;
+}
+#prawy{
+	background-color: #edd98e;
+	width: 70%;
+	height: 400px;
+	float: left;
+}
+#stopka{
+	clear: both;
+	background-color: rgb(186,155,80);
+	text-align: center;
+}

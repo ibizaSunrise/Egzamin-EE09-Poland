@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Usługi kosmetyczne</title>
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<div class="container">
+<div class="section-left">
+<div class="left-top">
+<h2>W ofercie</h2>
+<ul>
+<li><a href="twarz.html">Zabiegi na twarz</a>
+<ol>
+<li>Piling</li>
+<li>Maska</li>
+<li>Regulacja brwi</li>
+</ol>
+</li>
+<li>Masaż</li>
+<li>Diety oczyszczaące</li>
+<li></li>
+</ul>
+
+<a href="index.html">Do  strony głównej</a>
+
+</div>
+<div class="left-bottom">
+<img src="obraz1.jpg" alt="Kosmetyczka">
+</div>
+</div>
+<div class="section-right">
+<div class="right-top">
+<h1>Salon Kosmetyczny</h1>
+</div>
+<div class="right-bottom">
+<h2>Sprawdź cenę swojej wizyty</h2>
+
+	<input type="checkbox" value="45"> piling<br>
+    <input type="checkbox" value="30"> maska<br>
+    <input type="checkbox" value="20"> masaż<br>
+    <input type="checkbox" value="5"> regulacja brwi<br>
+	
+    <input type="button" value="Sprawdź cenę" id="btn">
+    <p id="p"></p>
+</div>
+</div>
+</div>
+<footer>
+<p>Autor: hhhhhhh</p>
+</footer>
+<script>
+		let btn = document.querySelector('#btn');
+        let p = document.querySelector('#p');
+        let oderList = document.querySelectorAll('input[type="checkbox"]');
+        let set = new Set;
+
+        for (let elem of oderList) {
+            elem.addEventListener('change', () => {
+               elem.checked ? set.add(+elem.value):
+               set.delete(+elem.value);
+               console.log(set);
+            });
+        }
+      
+        btn.addEventListener('click', () => {
+            let arr = Array.from(set);
+            let result = arr.reduce((sum, current) => sum + current);
+            p.textContent = `Cena zabiegów: ${result}`;
+        })
+
+</script>
+</body>
+</html>

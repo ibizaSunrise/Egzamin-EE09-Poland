@@ -1,0 +1,85 @@
+<?php
+//Skrypt 1 Form
+$host = "127.0.0.1";
+$user = "root";
+$password = "";
+$db_name = "biblioteka";
+
+$connect = mysqli_connect($host, $user, $password, $db_name);
+
+$imie = $_POST['imie'];
+$nazwisko = $_POST['nazwisko'];
+$rok = $_POST['rok'];
+
+echo "Czytelnik: ".$nazwisko."został dodany do bazy danych";
+
+$kod = $imie[0].$imie[1].$rok[0].$rok[1].$nazwisko[0].$nazwisko[1];
+
+$query = "INSERT INTRO `czytelnicy` VALUES (NULL, $imie, $nazwisko, $kod)";
+$result = mysqli_query($connect,$query);
+
+?>
+
+<?php
+//Skrypt 2 Ul
+$host = "127.0.0.1";
+$user = "root";
+$password = "";
+$db_name = "biblioteka";
+
+$connect = mysqli_connect($host, $user, $password, $db_name);
+$query="SELECT imie, nazwisko FROM `czytelnicy`";
+$result = mysqli_query($connect,$query);
+echo "<ul>";
+while($f=mysqli_fetch_assoc($result)){
+echo "<li>";
+echo $f['imie']. " ".$f['nazwisko'];
+echo "</li>"
+}
+echo "</ul>"
+
+?>
+
+<?php
+$id_polaczenia = mysqli_connect('localhost', 'root', '', 'sklep');
+$query = "SELECT nazwa FROM towary WHERE promocja = 1";
+$result = mysqli_query($id_polaczenia, $query);
+while($f=mysqli_fetch_array($result)){
+echo "<li>";
+echo $f['nazwa'];
+echo "</li>";
+}
+?>
+
+<?php
+$res = $_POST['promo'];
+echo $res;
+?>
+<!-- script 2 Formularz, select-->
+<?php
+$select = $_POST['promo'];
+$id_polaczenia = mysqli_connect('localhost', 'root', '', 'sklep');
+$query = "SELECT cena FROM `towary` WHERE nazwa='$select'";
+$result = mysqli_query($id_polaczenia, $query);
+$f=mysqli_fetch_array($result);
+$pr = round(($f['cena']*0.85), 2);
+echo "<p>";
+echo $pr;
+echo "</p>";
+?>
+
+
+
+the best skript--->
+
+<?php
+$id_polaczenia = mysqli_connect("localhost", "root", "", "sklep1");
+$zapytanie = mysqli_query($id_polaczenia, "SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena<1000");
+
+while($result = mysqli_fetch_array($zapytanie)){
+echo "<tr>";
+echo "<td>".$result['id']."</td>"."<td>".$result['nazwa']."</td>"."<td>".$result['opis']."</td>"."<td>".$result['cena']."</td>";
+echo "</tr>";
+}
+mysqli_close($id_polaczenia); 
+?>

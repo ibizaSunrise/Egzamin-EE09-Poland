@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formatowanie</title>
+<link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+<header>
+<h1>Formatowanie dokumentów HTML</h1>
+</header>
+<div class="wrapper">
+<div class="left">
+<h2>Przyklady listy - hobby</h2>
+<div class="listWrapper">
+<ul>
+<li>muzyka</li>
+<li>turystyka</li>
+<ol>
+<li>góry</li>
+<li>jeziora</li>
+<li>na rowerze</li>
+</ol>
+<li>książki</li>
+</ul>
+
+</div>
+
+
+</div>
+<div class="mid">
+<h2>Przykład tabeli - roskład dnia</h2>
+<table>
+<tr><th>Pora dnia</th><th>obowiązki</th></tr>
+<tr><td>rano</td><td>nauka</td></tr>
+<tr><td>południe</td><td>zajęcia dodatkowe</td></tr>
+<tr><td>popołudnie</td><td rowspan="2">moje hobby</td></tr>
+<tr><td>wieczór</td></tr>
+</table>
+</div>
+<div class="right">
+<img src="napisy.png" alt="technologia web">
+</div>
+</div>
+<main>
+
+<p>Podaj rozmiar tekstu w procentach<input type="number" id="sizeText">%</p>
+
+<p><select>
+<option value="normal">prosty</option>
+<option value = "italic">kursywa</option>
+</select></p>
+
+<p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+
+<input type="button" class="changeColor red">
+<input type="button" class="changeColor green">
+<input type="button" class="changeColor blue">
+
+
+<p id="result">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+</main>
+<footer>
+<p>Formatoaniem tekstu zajmował się: <i>xxxxxxx</i></p>
+<a href="http://formatowanie.pl">Odwiedź także</a>
+</footer>
+
+<script>
+let sizeText=document.querySelector('#sizeText');
+let select=document.querySelector('select');
+let result=document.querySelector('#result');
+let btnRed = document.querySelector('.red');
+let btnGreen = document.querySelector('.green');
+let btnBlue = document.querySelector('.blue');
+
+btnRed.addEventListener('click', ()=>{
+	result.style.color = "red";
+	changeFontstyle();
+	changeSize();
+})
+btnGreen.addEventListener('click', ()=>{
+	result.style.color = "green";
+	changeFontstyle();
+	changeSize();
+})
+btnBlue.addEventListener('click', ()=>{
+	result.style.color = "blue";
+	changeFontstyle();
+	changeSize();
+})
+
+function changeSize(){
+	result.style.fontSize = sizeText.value + '%';
+}
+
+function changeFontstyle(){
+		select.value == 'italic'? result.style.fontStyle = "italic" :
+		result.style.fontStyle = "normal";
+	}
+	
+</script>
+</body>
+</html>

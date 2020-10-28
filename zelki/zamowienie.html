@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lg="pl">
+<head>
+<meta charset="utf-8">
+<title>Fabryka żelków</title>
+<link rel="stylesheet" type="text/css" href="styl9.css">
+</head>
+<body>
+<container>
+<div class="wrapper">
+<div class="top-left">
+<a href="index.html"><img src="logo.png" alt="logo fabryki"></a>
+
+</div>
+<div class="top-right">
+<a href="zamowienie.html">Zamówienie</a>
+</div>
+</div>
+<header>
+<h2>Zamów nasz produkt</h2>
+</header>
+<main>
+<div class="main-left">
+<h1>Oferta</h1>
+<table>
+<tr>
+<td>Kształty</td>
+<td>Kolory</td>
+</tr>
+<tr>
+<td>
+<ol>
+<li>miś</li>
+<li>żabka</li>
+<li>serce</li>
+</ol>
+</td>
+<td>
+<ol>
+<li>czerwony</li>
+<li>niebieski</li>
+<li>żółty</li>
+<li>inny</li>
+</ol>
+</td>
+</tr>
+</table>
+</div>
+<div class="main-right">
+<p>Podaj numer kształtu</p>
+<input type="number" id="num"><br>
+skomponuj swój kolor, podaj RGB<br>
+R: <input type="number" id="r">
+G: <input type="number" id="g">
+B: <input type="number" id="b"><br>
+<input type="button" id="btn" value="Zamów">
+<p id="p">Wybrany kształt</p>
+<input type="button" id="kolor" value="Wybrany kolor">
+
+</div>
+</main>
+<footer>
+<p>Autor strony: <i>zzzzzzzz</i></p>
+</footer>
+</container>
+<script>
+
+let btn =document.querySelector('#btn');
+let kolor = document.querySelector('#kolor');
+
+btn.addEventListener('click', liczCsztalt);
+
+//RGB
+kolor.addEventListener('click', function(){
+let r = document.querySelector('#r').value;
+//r=+r;
+let g = document.querySelector('#g').value;
+//g=+g;
+let b = document.querySelector('#b').value;
+//b=+b;
+let rgb = String("rgb"+"("+r+","+g+","+b+")");
+this.style.backgroundColor = rgb;
+
+})
+
+function liczCsztalt(){
+	let p = document.querySelector('#p');
+	let nazwa;
+	let num = document.querySelector('#num').value;
+	num = +num;
+	console.log(num);
+	switch(num){
+	case 1 : nazwa="miś";
+	break;
+	case 2 : nazwa="żabka";
+	break;
+	case 3 : nazwa ="serce";
+	break;
+	case 4 : nazwa = "inny kształt";
+	break;	
+	}
+	p.innerHTML = "Zamówiłeś żelka: " + nazwa;
+}
+
+</script>
+</body>
+</html>

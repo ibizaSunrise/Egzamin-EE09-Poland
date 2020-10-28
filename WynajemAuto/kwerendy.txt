@@ -1,0 +1,5 @@
+Kwerenda N1: SELECT id, model, kolor FROM `samochody` WHERE marka = 'Toyota' AND rocznik=2014;
+
+Kwerenda N2: SELECT id, model, kolor, rocznik FROM `samochody`;
+
+Kwerenda N3: SELECT s.id, s.model, z.telefon FROM samochody s, zamowienia z WHERE s.id=z.samochody_id;

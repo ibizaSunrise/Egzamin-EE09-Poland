@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charse "utf-8">
+  
+    <title>Ukłasy stron</title>
+	<link rel="stylesheet" href="styl.css"/>
+	
+</head>
+<body>
+    <div class="gora">G1</div>
+    <div class="gora">G2</div>
+    <div class="gora">G3</div>
+    <div class="gora">G4</div>
+    <div class="gora"><a href="podstrona.html">Link do podstrony</a></div>
+    <div id="glowny">
+	<h2> Remonty mieszkań</h2>
+	<label>Podaj powerrzchnię:</label><br>
+	<input type="number" id="powerzchnia"/><br>
+	<label>Wybierz rodzaj płytek</label><br>
+	<input type="radio" name="rodzay" value="kwadrat" id="kwadrat">20x20cm - cena usługi 70 zł<br>
+	<input type="radio" name="rodzay" value="prostok" id="prostok">25x12cm - cena usługi 80 zł<br>
+	<input type="button"  value="Oblicz" onclick="oblicz()"><br>
+	<p id="wynik"></p>
+	
+	</div>
+    <div id="stopka">pesel: 123456787</div>
+	<script>
+	    function oblicz () {
+		 var cena;
+		 var pow=document.getElementById("powerzchnia").value;
+		 var wynik=document.getElementById("wynik");
+		 wynik.innerHTML = pow;
+		 var kwadrat = document.getElementById("kwadrat");
+		 var prostok =  document.getElementById("prostok");
+		 if(kwadrat.checked)
+			 cena = 70;
+		 if(prostok.checked)
+			 cena = 80;
+		 var koszt = cena * pow;
+		 
+		 var wynik = document.getElementById("wynik");
+		 wynik.innerHTML = koszt;
+		}
+		 
+	</script>
+    
+</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Jaka to liczba?</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="czcionka.css" />
+ </head>
+ <body>
+  <header>
+<a href="index.html"><img src="baner.png" alt="baner"/></a>
+  </header>
+  <nav>
+<a href="index.html">Opis</a>
+<a href="jaka_to_liczba.html">Jaka to liczba?</a>
+<a href="liczby_calkowite_z_zakresu.html">Liczby całkowite z zakresu</a>
+<a href="suma.html">Oblicz sumę</a>
+ <a href="roznica.html">Oblicz roznicę</a>
+		  <a href="iloczyn.html">Oblicz iloczyn</a>
+		   <a href="iloraz.html">Oblicz iloraz</a>
+  </nav>
+  <main>
+    <input id="in1" type="text" >
+    <button onclick="up()">OK</button>
+    <p></p>
+    
+</main>
+<script>
+  function up(){
+    let liczba = document.getElementById("in1").value;
+   
+    
+    if(liczba>0){
+      document.querySelector("p").innerHTML = "To jest liczba dodatnia";
+    }else if(liczba==0){
+      document.querySelector("p").innerHTML = "To jest zero";
+    }else if(liczba<0){
+      document.querySelector("p").innerHTML = "To jest liczba ujemna";
+    }else {
+      document.querySelector("p").innerHTML = "To nie jest liczba";
+    }
+  }
+    
+    </script>
+    
+ </body>
+</html>

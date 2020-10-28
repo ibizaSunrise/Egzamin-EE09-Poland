@@ -1,0 +1,10 @@
+1.wybierającą jedynie cenę niebieskiej puszki farby
+
+SELECT cena from farby where id_farby = 3
+
+2.wybierającą jedynie nazwę koloru oraz cenę jednego litra farby obliczoną za
+pomocą pól cena i pojemnosc dla wszystkich wierszy tabeli farby 
+
+SELECT color, ROUND(cena / pojemosc,2) from farby;
+
+3.wybierającą jedynie nazwy kolorów farb dla pomieszczenia 3

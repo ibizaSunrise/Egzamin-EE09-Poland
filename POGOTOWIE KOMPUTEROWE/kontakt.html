@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pogotowie komputerowe</title>
+<link rel="stylesheet" type="text/css" href="styl.css">
+<link rel="icon" type="image/png" href="favicon1.png">
+</head>
+<body>
+<div class="wrapper">
+<header>
+<img src="animacja.gif" alt = "animacja">
+</header>
+<nav>
+<a href="index.html">O nas</a>
+<a href="kontakt.html">Kontakt</a>
+</nav>
+<main>
+<div class="main_left"></div>
+<div class="main_mid">
+<h3>Formularz kontaktowy</h3>
+<form>
+<table>
+<tr>
+<td>Imię:</td><td><input type="text" id="imie"></td>
+</tr>
+<tr>
+<td>Nazwisko:</td><td><input type="text" id="nazw"></td>
+</tr>
+<tr>
+<td>E-mail:</td><td><input type="email" id="email"></td>
+</tr>
+<tr>
+<td>Usługa:</td><td><select id="select">
+<option>naprawa komputera</option>
+<option>odzyskiwanie danych</option>
+<option>problemy z oprogramowaniem</option>
+<option>konfiguracja sieci LAN</option>
+<option>inne</option>
+</select></td>
+</tr>
+<tr>
+<td></td><td><input type="checkbox" id="check">Wyślij kopię wiadomości</td>
+</tr>
+<tr>
+<td></td><td><input type="reset" id="reset" value="Resetuj">
+<button type="button" id="up">Prześlij</button> </td>
+</tr>
+</table>
+</form>
+<p id="p"></p>
+</div>
+<div class="main_right"></div>
+</main>
+<footer>
+<p>Autor strony:<b>zzzzzzz</b></p>
+</footer>
+</div>
+
+<script>
+let up=document.querySelector('#up');
+
+ up.addEventListener('click', function(){
+let imie = document.querySelector('#imie').value;
+let nazw = document.querySelector('#nazw').value;
+let email = document.querySelector('#email').value;
+let select = document.querySelector('#select').value;
+let p = document.querySelector('#p');
+let str = String(email).toLowerCase();
+
+p.innerHTML = imie + " "+ nazw + "<br>"+str+"<br>"+ "Usługa: "+select;
+})
+</script>
+</body>
+</html>

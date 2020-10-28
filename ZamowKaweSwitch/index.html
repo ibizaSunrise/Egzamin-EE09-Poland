@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Kawa</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="czcionka.css" />
+ </head>
+ <body>
+  <header>
+<h1>Zamów kawę!</h1>
+  </header>
+  
+  <main>
+  <table border="1">
+  <tr><td>Numer kawy</td><td>Nazwa</td><td>Cena za 1 dekagram</td></tr>
+  <tr><td>1</td><td>Kawa palona Arabica</td><td>5zl</td></tr>
+  <tr><td>2</td><td>Kawa palona Robusta</td><td>7zl</td></tr>
+  <tr><td>3</td><td>Kawa bezkofeinowa</td><td>6zl</td></tr>
+  
+  </table><br>
+  <img src ="indeks.jpg" alt="kawa"><br>
+        Numer kawy:<input id="kawa_id" type="number"><br>
+        Zamowiona ilosc:<input id="kawa_waga" type="number">
+        <button onclick = "kawa_licz()">Oblicz cenę</button>
+        <p id="p"></p>
+		
+</main>
+<script>
+        function kawa_licz() {
+            let kawaId = document.getElementById("kawa_id").value;
+            let kawaWaga = document.getElementById("kawa_waga").value;
+            kawaId = +kawaId;
+            kawaWaga = +kawaWaga;
+			
+			switch(kawaId){
+			case 1:
+			document.getElementById("p").innerHTML = "Płacę: "+ kawaWaga*5 + " zł";
+			break;
+			case 2:
+			document.getElementById("p").innerHTML = "Płacę: "+kawaWaga*7 + " zł";
+			break;
+			case 3:
+			document.getElementById("p").innerHTML = "Płacę: "+kawaWaga*6 + " zł";
+			break;
+		
+			}
+			
+
+            
+        }
+    </script>
+ </body>
+</html>
