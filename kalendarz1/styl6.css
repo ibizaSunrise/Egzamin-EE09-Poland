@@ -1,0 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+
+html, body{
+	font-family: Georgia;
+}
+
+.baner__left, .baner__mid {
+	float: left;
+	background-color:  #3CB371;
+	color: white;
+	height: 100px;
+	width: 40%;
+}
+.baner__right{
+	float: left;
+	background-color:  #3CB371;
+	height: 100px;
+	width: 20%;
+}
+.main{
+	clear: both;
+	
+}
+.oneDay{
+	float: left;
+	background-color: #FFDAB9;
+	width: 170px;
+	height: 90px;
+	margin: 5px;
+	border: 1px solid #3CB371;
+}
+footer{
+	clear: both;
+	background-color: #3CB371;
+	color: white;
+	
+}
+
+h6{
+	text-align: left;
+}
+
+form{
+	padding: 30px;
+}
