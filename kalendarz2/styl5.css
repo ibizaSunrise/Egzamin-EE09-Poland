@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+.header__left{
+	float: left;
+	background-color: #483D8B;
+	height: 150px;
+	width: 30%;
+}
+
+.header__right{
+	float: left;
+	background-color: #483D8B;
+	color: white;
+	height: 150px;
+	width: 70%;
+}
+
+.main{
+	clear: both;
+	
+}
+.main__one{
+	background-color: #AFEEEE;
+	width: 150px;
+	height: 100px;
+	margin: 3px;
+	border: 1px solid black;
+	float: left;
+}
+footer{
+	clear: both;
+	background-color: #483D8B;
+	color: white;
+	padding: 10px;
+}
+
+h5{
+	text-align: center;
+	padding-bottom: 30px;
+}
