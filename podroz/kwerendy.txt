@@ -15,4 +15,4 @@ SELECT z.podpis, w.cena, w.cel FROM zdjecia z, wycieczki w WHERE z.id=w.zdjecia_
 
 ‒ Zapytanie 4: usuwające pole dataWyjazdu z tabeli wycieczki 
 
-ALTER TABLE wycieczki DROP dataWyjazdu;
+ALTER TABLE wycieczki ADD dataPrzyjazdu DATE AFTER dataWyjazdu
