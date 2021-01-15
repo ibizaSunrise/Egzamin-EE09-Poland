@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "pl">
+<head>
+	<meta charset = "utf-8">
+	<title>Usługi fryzjerskie</title>
+	<link rel = "stylesheet" href = "styl2.css">
+</head>
+<body>
+	<div class = "container">
+		<div class = "left">
+			<div class = "left__top">
+				<h2><a href = "index.html">SALON FRYZJERSKI</a></h2>
+				<img src = "obraz2.jpg" alt = "Czesanie">
+			</div>
+		
+			<div class = "left__bottom">
+				<h3>Dziś promocja na strzyżenie włosów</h3>
+				<input type = "radio" name = "radio" value = "25"> Krótkie<br>
+				<input type = "radio" name = "radio" value = "30">  Średnie<br>
+				<input type = "radio" name = "radio" value = "40">  Półdługie<br>
+				<input type = "radio" name = "radio" value = "50">  Długie<br>
+				<button>Odkryj promocję</button>
+				<p id = "p">Cena strzyżenia: </p>
+				
+			</div>
+		</div>
+		
+		<div class = "right">
+			<div class = "right__top">
+				<h2>MENU</h2>
+			</div>
+			<div class = "right__mid">
+				<ol>
+					<li><a href = "fryzura.html">Strzyżenie</a>
+						<ul>
+							<li>krótkie</li>
+							<li>średnie</li>
+							<li>półdługie</li>
+							<li>długie</li>
+						</ul>
+					</li>
+					<li>Czesanie</li>
+					<li>Koloryzacja</li>
+				</ol>
+			</div>
+			<div class = "right__bottom">
+				<img src = "obraz1.jpg" alt = "Fryzjer">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<p>Autor: xxxxxxx</p>
+	</footer>
+	<script>
+		let btn = document.querySelector('button');
+		btn.addEventListener('click', () => {
+			let list = document.querySelectorAll('input');
+			let p = document.querySelector('#p');
+				for(let i = 0; i < list.length; i++){
+					if(list[i].checked)p.innerHTML = "Cena strzyżenia: " + list[i].value;
+				}
+		})
+	</script>
+</body>
+</html>
