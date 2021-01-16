@@ -14,4 +14,4 @@ CREATE USER 'kosmetyczka'@'localhost' IDENTIFIED BY 'Kosmet34';
 ‒ Zapytanie 4: nadające prawa przeglądania danych i wstawiania rekordów do tabeli uslugi bazy
 egzamin1 dla użytkownika kosmetyczka
 
-GRANT SELECT, INSERT ON egzamin1.* TO kosmetyczka@localhost;
+GRANT SELECT, INSERT ON egzamin1.uslugi TO kosmetyczka@localhost;
