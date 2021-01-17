@@ -2,6 +2,6 @@
 
 2) SELECT Ryby_id, wymiar_ochronny FROM Okres_ochronny WHERE wymiar_ochronny < 50;
 
-3) SELECT r.nazwa, l.akwen, l.wojewodstwo FROM Ryby r, Lowisko l WHERE r.id = l.Ryby_id AND l.rodzaj = 2;
+3) SELECT r.nazwa, l.akwen, l.wojewodztwo FROM Ryby r, Lowisko l WHERE r.id = l.Ryby_id AND l.rodzaj = 2;
 
 4)ALTER TABLE Ryby ADD dobowy_limit INT;
