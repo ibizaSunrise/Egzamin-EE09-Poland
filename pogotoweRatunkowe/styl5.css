@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Georgia;
+	
+}
+
+.header__left, .header__mid, .header__right, .footer__left,.footer__mid, .footer__right {
+	float: left;
+	background-color: Sienna;
+	color: white;
+	height: 150px;
+}
+
+.header__left, .footer__left{
+	width: 40%;
+}
+
+.header__mid, .footer__mid{
+	width: 50%;
+	font-size: 150%;
+}
+
+.header__right, .footer__right{
+	width: 10%;
+	text-align: center;
+}
+
+main{
+	clear: both;
+	background-color: Tan;
+	padding: 100px;
+}
+a{
+	border: 1px solid Sienna;
+	background-color: Tan;
+	color: Sienna;
+	padding: 40px;
+	line-height: 150px;
+}
+
+li{
+	list-style-type: circle;
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

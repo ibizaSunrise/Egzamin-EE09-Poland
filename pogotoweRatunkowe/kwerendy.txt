@@ -1,0 +1,17 @@
+1)
+INSERT INTO zgloszenia SET ratownicy_id = 1,
+dyspozytorzy_id = 4,
+adres = "Warszawa, Staszica 34/5",
+pilne = 1,
+czas_zgloszenia = CURTIME();
+
+INSERT INTO zgloszenia VALUES (NULL, 1, 4, 'Warszawa, Staszica 34/5', 1, CURTIME();
+
+2)
+SELECT adres, dyspozytorzy_id FROM zgloszenia WHERE ratownicy_id = 3;
+
+3)
+CREATE USER 'anna'@'localhost' IDENTIFIED BY 'Anna4!';
+
+4)
+GRANT SELECT, INSERT, UPDATE ON zgloszenia TO 'anna'@'localhost';
